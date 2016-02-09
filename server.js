@@ -8,10 +8,10 @@ var path = require('path');
 app.use(bodyParser.json());
 
 // view engine setup
-app.use(express.static(path.join(__dirname, './views')));
+app.use(express.static(path.join(__dirname, '/views')));
 
 app.get('/', (req, res) => {
-  res.sendFile('./views/index.html');
+  res.sendFile('/views/index.html');
 });
 
 app.post('/', multer({ dest: './uploads/'}).single('upl'), (req, res) => {
